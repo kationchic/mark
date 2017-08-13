@@ -40,7 +40,8 @@ header{
 	background: @header_bg url(../img/header_bg.jpg) no-repeat bottom center;	
 	background-size: cover;	
 	min-height: 450px;	
-	height: 100vh;	
+	height: 100vh;
+
 	.main{
 		&-menu{
 			position: fixed;
@@ -51,38 +52,29 @@ header{
 		&-text{
 			margin-top: 50%;
 		}	
+		&-trigger{
+			clip: rect(0, 0, 0, 0);
+			position: absolute;
+		}
 		&-icons{	
-			text-align: right;
-			padding: 10px 0;
-			a{
+			text-align: right;			
+			.no-wrap;
+			li{
+				list-style: none;
+				padding: 10px 0;
+			}
+			li a{
 				text-decoration: none;
 				color: @grey_main;
 			}	
-			a:hover{
+			li a:hover{
 				color: @grey_header;
-			}		
-			&-menu, &-menu:before, &-menu:after{
-				height: 6px;
-				width: 30px;
-				background-color: @grey_header;
-				position: absolute;
-				right: 0;						
-			}
-			&-menu{				
-				&-pad{
-					padding-bottom: 30px;
-				}				
-			}
-			&-menu:after{
-				content: '';
-				top: -12px;
-			}	
-			&-menu:before{
-				content: '';
-				top: 12px;
-			}
+			}								
 
 		}
+	}
+	label[for="main-icons-trigger"]{			
+		cursor: pointer;	
 	}
 	h1{
 		.text(700, 40px);
@@ -183,14 +175,27 @@ footer{
 			&-text{
 				margin-top: 0;
 			}
+			&-icons:hover{
+				display:block;
+			}
+			&-menu{
+				input:checked ~ ul{
+					display: block;
+				}
+			}
 			&-icons{
+				display:none;
+				margin-right: 10px;
 				&-menu, &-menu:before, &-menu:after{
 					height: 4px;
 					width: 25px;
+					background-color: @grey_header;
+					position: absolute;
+					right: 0;
 				}
 				&-menu:after{
-				content: '';
-				top: -8px;
+					content: '';
+					top: -8px;
 				}	
 				&-menu:before{
 					content: '';
@@ -206,6 +211,9 @@ footer{
 		.introducing{
 			&-text{
 				margin-top: 3%;
+			}
+			&-img{
+				display: none;
 			}
 		}
 	}
@@ -245,8 +253,29 @@ footer{
 			&-text{
 				margin-top: 5%;
 			}	
+			&-menu{
+				input:checked ~ ul{
+					display: block;
+				}
+			}
 			&-icons{				
-				padding: 5px 0;			
+				padding: 5px 0;
+				display: none;
+				&-menu, &-menu:before, &-menu:after{
+					height: 6px;
+					width: 30px;
+					background-color: @grey_header;
+					position: absolute;
+					right: 0;						
+				}			
+				&-menu:after{
+					content: '';
+					top: -12px;
+				}	
+				&-menu:before{
+					content: '';
+					top: 12px;
+				}			
 			}	
 		}	
 	}	
@@ -258,6 +287,9 @@ footer{
 		.introducing{
 			&-text{
 				margin-top: 5%;
+			}
+			&-img{
+				display: none;
 			}
 		}
 	}

@@ -25,50 +25,27 @@
         <!-- MENU -->
         <div class="main-menu">
           <div class="row">
-            <div class="col-lg-1 col-lg-offset-11">
-              <div class="main-icons-menu"></div>
-            </div>
-          </div>     
-          <div class="main-icons-menu-pad"></div>   
-          <!-- ICONS -->
-          <div class="row">
-            <!-- TWITTER -->
-            <div class="col-xs-1 col-xs-offset-11">
-              <div class="main-icons">
-                <a href="#search"><i class="fa fa-twitter" aria-hidden="true"></i></a>            
+            <div class="col-xs-1 col-xs-offset-11">  
+              <!-- sandwich -->
+              <input type="checkbox" id="main-icons-trigger" class="main-trigger"/>
+              <label for="main-icons-trigger"><div class="main-icons-menu"></div></label>             
+              <!-- icons -->
+              <ul class="main-icons">                
+                <!-- TWITTER -->
+                <li><a href="#twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <!-- FACEBOOK -->
+                <li><a href="#facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <!-- GOOGLE+ -->
+                <li><a href="#google"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a></li>
+                <!-- INSTAGRAM -->
+                <li><a href="#instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <!-- DRIBBLE -->
+                <li><a href="#dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                <!-- SEARCH -->
+                <li><a href="#search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
               </div>
-            </div>
-            <!-- FACEBOOK -->
-            <div class="col-xs-1 col-xs-offset-11">
-              <div class="main-icons">
-                <a href="#search"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-              </div>
-            </div>
-            <!-- GOOGLE+ -->
-            <div class="col-xs-1 col-xs-offset-11">
-              <div class="main-icons">
-                <a href="#search"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
-              </div>
-            </div>
-            <!-- INSTAGRAM -->
-            <div class="col-xs-1 col-xs-offset-11">
-              <div class="main-icons">
-                <a href="#search"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              </div>
-            </div>
-            <!-- DRIBBLE -->
-            <div class="col-xs-1 col-xs-offset-11">
-              <div class="main-icons">
-                <a href="#search"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-              </div>
-            </div>
-            <!-- SEARCH -->
-            <div class="col-xs-1 col-xs-offset-11">
-              <div class="main-icons">
-                <a href="#search"><i class="fa fa-search" aria-hidden="true"></i></a>
-              </div>
-            </div>
-          </div>
+            </ul>
+          </div>          
         </div>
         <!-- HEADER -->
         <div class="row">
@@ -199,5 +176,8 @@
         </div>        
       </div>      
     </footer>
+    <script type="text/javascript">
+      document.getElementById('main-icons-trigger').checked="";
+    </script>
   </body>
 </html>
